@@ -15,6 +15,8 @@ class Util:
                 Returns:
                     dictionary_schema (dict): schema for the json object or python dictionary.
         """
+        if not issubclass(dict, type(data)):
+            raise TypeError
         return {
             "type": "OBJECT",
             "tag": "",
